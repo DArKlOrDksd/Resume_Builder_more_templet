@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdn.apidelv.com/libs/awesome-functions/awesome-functions.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div class="container" id="CV-form">
+        <!--layout of HTML page-->
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">DSN Project</p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <!--                                                                         First coloum                                                                -->
+                <h3>Personal Insformation</h3>
+
+                <!-- <div class="form-group mt-2">
+                    <label for="nickField">Your Nick Name</label>
+                    <input type="text" id="nickField" placeholder="Enter first alphabet " class="form-control">
+                </div> -->
+
+                <div class="form-group mt-2">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="number" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+
+                <!-- <div class="form-group mt-6">
+                    <label for="">Selecte your profile photo</label>
+                    <input id="imgField" type="file" class="form-control">
+
+                </div> -->
+
+
+
+                <div class="form-group mt-2" id="ex">
+                    <label for="">EXPERTISE</label>
+                    <textarea id="ExpertiseField" placeholder="Enter here" class="form-control exField"
+                        rows="3"></textarea>
+
+                    <div class="container text-center mt-2" id="exAddButton">
+                        <button onclick="addexWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+
+                <p class="secondary-text mt-3">Importnts Links</p>
+
+                <div class="form-group mt-1">
+                    <label for="EmailField">Email ID</label>
+                    <input type="text" id="EmailField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-1">
+                    <label for="fbField">Twitter Link</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Dribbble Link</label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">Codepen Link</label>
+                    <input type="text" id="linkedField" placeholder="Enter here" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <!--                                                               second coloum                                                                       -->
+                <h3>Professional Information</h3>
+
+                <!-- <div class="form-group mt-2">
+                    <label for="jobField">Job type</label>
+                    <input type="text" id="jobField" placeholder="Enter here" class="form-control">
+                </div> -->
+                <div class="form-group mt-2">
+                    <label for="">Hobbies</label>
+                    <textarea id="hobiesField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="">Profile</label>
+                    <textarea id="objectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <!-- <div class="form-group mt-2" id="we">
+                    <label for="">Education</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+
+                    <!-- new textarea -->
+
+                <!-- <div class="container text-center mt-2" id="weAddButton"> -->
+                <!--<button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> -->
+            </div>
+
+        </div>
+        <div class="form-group mt-2">
+            <label for="">Company 1</label>
+            <textarea id="com1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Company 2</label>
+            <textarea id="com2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Company 3</label>
+            <textarea id="com3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job type 1</label>
+            <textarea id="comj1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job type 2</label>
+            <textarea id="comj2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job type 3</label>
+            <textarea id="comj3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job description 1</label>
+            <textarea id="comd1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job description 2</label>
+            <textarea id="comd2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">Job description 3</label>
+            <textarea id="comd3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="yearField">Year com 1</label>
+            <input type="text" id="year1Field" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="yearField">Year com 2</label>
+            <input type="text" id="year2Field" placeholder="Enter here" class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="yearField">Year com 3</label>
+            <input type="text" id="year3Field" placeholder="Enter here" class="form-control">
+        </div>
+
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <div class="resume-wrapper" id="container_content" class="container_content" >
+        <section class="profile section-padding">
+            <div class="container">
+                <div class="picture-resume-wrapper">
+                    <div class="picture-resume">
+
+                        <!-- <svg version="1.1" viewBox="0 0 350 350"> -->
+
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+                            </filter>
+                        </defs>
+
+
+                        <g filter="url(#goo)">
+
+                            <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130" />
+
+                            <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7" />
+                            <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7" />
+
+                        </g>
+                        </svg>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="name-wrapper">
+                    <h1 id="nameT">John <br />Anderson</h1><!-- YOUR NAME AND LAST NAME  -->
+                </div>
+                <div class="clearfix"></div>
+                <div class="contact-info clearfix">
+                    <ul class="list-titles">
+                        <li>Call</li>
+                        <li>Mail</li>
+
+                        <li>Home</li>
+                    </ul>
+                    <ul class="list-content ">
+                        <li id="contactT">+34 123 456 789</li> <!-- YOUR PHONE NUMBER  -->
+                        <li id="emailT">j.anderson@gmail.com</li> <!-- YOUR EMAIL -->
+
+                        <li id="addressT">Los Angeles, CA</li> <!-- YOUR STATE AND COUNTRY  -->
+                    </ul>
+                </div>
+                <div class="contact-presentation">
+                    <!-- YOUR PRESENTATION RESUME  -->
+                    <p><span class="bold" id="objectiveT">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamus
+                            euismod congue nisi, nec consequat quam. In consectetur faucibus turpis eget laoreet. Sed
+                            nec
+                            imperdiet purus.</span> </p>
+                </div>
+                <div class="contact-social clearfix">
+                    <ul class="list-titles">
+                        <li>Twitter</li>
+                        <li>Dribbble</li>
+                        <li>Codepen</li>
+                    </ul>
+                    <ul class="list-content">
+                        <!-- REMEMBER TO PUT THE URL ON THE HREF TAG  -->
+                        <li><a href="" id="twitT">@janderson</a></li> <!-- YOUR TWITTER USER  -->
+                        <li><a href="" id="dribT">janderson</a></li> <!-- YOUR DRIBBBLE USER  -->
+                        <li><a href="" id="codeT">janderson</a></li> <!-- YOUR BEHANCE USER  -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section-padding">
+            <div class="container">
+                <h3 class="experience-title">Experience</h3>
+
+                <div class="experience-wrapper">
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title" id="comp1T">Company name</div>
+                        <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time" id="comp1T2">Nov 2012 - Present</div>
+                        <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title" id="comp1T3">Front End Developer </div> <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p id="comp1T4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit
+                                facilisis,
+                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title" id="comp2T">Company name</div>
+                        <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time" id="comp2T2">Nov 2010 - Present</div>
+                        <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title" id="comp2T3">Freelance, Web Designer / Web Developer</div>
+                        <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p id="comp2T4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit
+                                facilisis,
+                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                    <div class="company-wrapper clearfix">
+                        <div class="experience-title" id="comp3T">Company name</div>
+                        <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+                        <div class="time" id="comp3T2">Nov 2009 - Nov 2010</div>
+                        <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+                    </div>
+
+                    <div class="job-wrapper clearfix">
+                        <div class="experience-title" id="comp3T3">Web Designer </div> <!-- JOB TITLE  -->
+                        <div class="company-description">
+                            <p id="comp3T4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit
+                                facilisis,
+                                adipiscing leo in, dignissim magna.</p> <!-- JOB DESCRIPTION  -->
+                        </div>
+                    </div>
+
+                </div>
+                <!--Skill experience-->
+
+                <div class="section-wrapper clearfix">
+                    <h3 class="section-title">Skills</h3> <!-- YOUR SET OF SKILLS  -->
+                    <ul id="skT">
+                        <li class="skill-percentage">HTML / HTML5</li>
+                        <li class="skill-percentage">CSS / CSS3 / SASS / LESS</li>
+                        <li class="skill-percentage">Javascript</li>
+                        <li class="skill-percentage">Jquery</li>
+                        <li class="skill-percentage">Wordpress</li>
+                        <li class="skill-percentage">Photoshop</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="section-wrapper clearfix">
+                    <h3 class="section-title">Hobbies</h3> <!-- DESCRIPTION OF YOUR HOBBIES -->
+                    <p id="hobT">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis,
+                        adipiscing leo
+                        in, dignissim magna.</p>
+
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a elit facilisis, adipiscing leo
+                        in, dignissim magna.</p> -->
+                </div>
+
+            </div>
+        </section>
+        <div class="text-center" style="padding:20px;" id="print">
+            <input type="button" id="rep" value="Print" class="btn btn-info btn_print">
+        </div>
+       
+
+
+
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+
+            $(document).on('click', '.btn_print', function (event) {
+                event.preventDefault();
+
+                //credit : https://ekoopmans.github.io/html2pdf.js
+
+                var element = document.getElementById('container_content');
+
+                //easy
+                //html2pdf().from(element).save();
+
+                //custom file name
+                //html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
+
+
+                //more custom settings
+                var opt =
+                {
+                    margin: 0,
+                    filename: 'pageContent_' + js.AutoCode() + '.pdf',
+                    image: { type: 'jpeg', quality: 2.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+
+                // New Promise-based usage:
+                html2pdf().set(opt).from(element).save();
+
+
+            });
+
+
+
+        });
+    </script>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+
+</body>
+
+</html>

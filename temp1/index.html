@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container hero" id="CV-form">
+        <!--layout of HTML page-->
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">DSN Project</p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <!--                                                                         First coloum                                                                -->
+                <h3>Personal Insformation</h3>
+
+                <div class="form-group mt-2">
+                    <label for="nickField">Your Nick Name</label>
+                    <input type="text" id="nickField" placeholder="Enter first alphabet " class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="number" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+
+                <div class="form-group mt-6">
+                    <label for="">Selecte your profile photo</label>
+                    <input id="imgField" type="file" class="form-control">
+
+                </div>
+
+
+
+                <div class="form-group mt-2" id="ex">
+                    <label for="">EXPERTISE</label>
+                    <textarea id="ExpertiseField" placeholder="Enter here" class="form-control exField"
+                        rows="3"></textarea>
+
+                    <div class="container text-center mt-2" id="exAddButton">
+                        <button onclick="addexWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+
+                <p class="secondary-text mt-3">Importnts Links</p>
+
+                <div class="form-group mt-1">
+                    <label for="EmailField">Email ID</label>
+                    <input type="text" id="EmailField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-1">
+                    <label for="fbField">Twitter Link</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Pinterest Link</label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">LinkedIn</label>
+                    <input type="text" id="linkedField" placeholder="Enter here" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <!--                                                               second coloum                                                                       -->
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="jobField">Job type</label>
+                    <input type="text" id="jobField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="">Profile</label>
+                    <textarea id="objectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Education</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+
+                    <!-- new textarea -->
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                    <div class="form-group mt-2" id="aq">
+                        <label for="">Experience</label>
+                        <textarea placeholder="Enter here" class="form-control aqField" rows="3"></textarea>
+
+                        <!-- new textaraea -->
+
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container text-center mt-3">
+                <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="rela-block page" id="CV-template">
+        <div class="rela-block top-bar">
+            <div class="caps name">
+                <div class="abs-center" id="nameT">Kyle J Shanks</div>
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="mugshot">
+                <img src="https://www.kindpng.com/picc/m/69-691018_blank-profile-picture-gmail-hd-png-download.png"
+                    alt="" class="img-fluid myimg" id="imgTe">
+                <div class="logo">
+                    <svg viewbox="0 0 80 80">
+
+                        <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="2.5" fill="none">
+                    </svg>
+                    <p class="logo-text" id="nickT">kj</p>
+                </div>
+            </div>
+            <p id="addressT">123 My Place Drive</p>
+
+            <p id="contactT">1-800-CALLPLZ</p>
+            <p id="emailT">emailsareforsquares@gmail.com</p><br>
+            <p class="rela-block social twitter"> <a id="twitT" href="#1">http://www.twitter.com</a></p>
+            <p class="rela-block social pinterest"> <a id="pinT" href="#1">http://www.twitter.com</a></p>
+            <p class="rela-block social linked-in"> <a id="linkT" href="#1">http://www.twitter.com</a></p>
+
+
+            <!-- <p class="rela-block social twitter" id="twitT">Twitter stuff</p>
+            <p class="rela-block social pinterest" id="pinT">Pinterest things</p>
+            <p class="rela-block social linked-in" id="linkT">Linked-in man</p>
+            <p class="rela-block caps side-header">Expertise</p> -->
+
+
+            <p class="rela-block caps side-header">Expertise</p>
+            <ul id="exT">
+                <li class="rela-block list-thing">HTML</li>
+                <li class="rela-block list-thing">JAVA</li>
+                <li class="rela-block list-thing">PHYTON</li>
+            </ul>
+            <p class="rela-block caps side-header">Education</p>
+            <ul id="eduT">
+                <li class="rela-block list-thing">dfekv</li>
+                <li class="rela-block list-thing">dfvdf</li>
+                <li class="rela-block list-thing">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam,
+                    laudantium corporis ipsum similique veritatis in cum!</li>
+                <li class="rela-block list-thing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                    perspiciatis inventore beatae deserunt, aut veritatis quibusdam officia, temporibus praesentium
+                    nulla error debitis? Nisi quisquam numquam voluptate minus necessitatibus velit? Perspiciatis.</li>
+            </ul>
+        </div>
+        <div class="rela-block content-container">
+            <h2 class="rela-block caps title" id="jobT">Jr Front-End Developer</h2>
+            <div class="rela-block separator"></div>
+            <div class="rela-block caps greyed" >Profile</div>
+            <p class="long-margin" id="objectiveT">Retro DIY quinoa, mixtape williamsburg master cleanse bushwick tumblr
+                chillwave
+                dreamcatcher hella wolf paleo. Knausgaard semiotics truffaut cornhole hoodie, YOLO meggings gochujang
+                tofu. Locavore ugh kale chips iPhone biodiesel typewriter freegan, kinfolk brooklyn kitsch man bun.
+                Austin neutra etsy, lumbersexual paleo cornhole sriracha kinfolk meggings kickstarter. </p>
+            <div class="rela-block caps greyed">Experience</div>
+            <ul id="weT">
+                <h3>Job #1</h3>
+                <p class="light">First job description</p>
+                <p class="justified">Plaid gentrify put a bird on it, pickled XOXO farm-to-table irony raw denim
+                    messenger
+                    bag leggings. Hoodie PBR&B photo booth, vegan chillwave meh paleo freegan ramps. Letterpress shabby
+                    chic
+                    fixie semiotics. Meditation sriracha banjo pour-over. Gochujang pickled hashtag mixtape cred
+                    chambray.
+                    Freegan microdosing VHS, 90's bicycle rights aesthetic hella PBR&B. </p>
+
+                <h3>Job #2</h3>
+                <p class="light">Second Job Description</p>
+                <p class="justified">Beard before they sold out photo booth distillery health goth. Hammock franzen
+                    green
+                    juice meggings, ethical sriracha tattooed schlitz mixtape man bun stumptown swag whatever distillery
+                    blog. Affogato iPhone normcore, meggings actually direct trade lomo plaid franzen shoreditch. Photo
+                    booth pug paleo austin, pour-over banh mi scenester vice food truck slow-carb. Street art kogi
+                    normcore,
+                    vice everyday carry crucifix thundercats man bun raw denim echo park pork belly helvetica vinyl.
+                </p>
+
+                <h3>Job #3</h3>
+                <p class="light">Third Job Description</p>
+                <p class="justified">Next level roof party lo-fi fingerstache skateboard, kogi tumblr. Shabby chic put a
+                    bird on it chambray, 3 wolf moon swag beard brooklyn post-ironic taxidermy art party microdosing
+                    keffiyeh marfa. Put a bird on it 3 wolf moon cliche helvetica knausgaard. Mumblecore fingerstache
+                    lomo,
+                    artisan freegan keffiyeh paleo kinfolk kale chips street art blog flannel.</p>
+            </ul>
+
+            <div class="container mt-4 text-center">
+                <button onclick="printCV()" class="btn background">Print CV</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

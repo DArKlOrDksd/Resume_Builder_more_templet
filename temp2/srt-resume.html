@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+
+	<title>Jonathan Doe | Web Designer, Director | name@yourdomain.com</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css"
+		href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+	<meta name="viewport " content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+	<div class="container" id="CV-form">
+		<!--layout of HTML page-->
+		<h1 class="text-center my-2">Resume Generator</h1>
+		<p class="text-center">DSN Project</p>
+
+		<div class="row">
+
+			<div class="col-md-6">
+				<!--                                                                         First coloum                                                                -->
+				<h2>Personal Insformation</h2>
+
+				<div class="form-group mt-2">
+					<label for="nameField">Your Name</label>
+					<input type="text" id="nameField" placeholder="Enter here" class="form-control">
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="nameField">About what you</label>
+					<input type="text" id="aboField" placeholder="Enter here" class="form-control">
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="contactField">Your Contact</label>
+					<input type="number" id="contactField" placeholder="Enter here" class="form-control">
+				</div>
+
+
+				<div class="form-group mt-1">
+					<label for="fbField">Email</label>
+					<input type="text" id="fbField" placeholder="Enter here" class="form-control">
+				</div>
+
+
+				<div class="form-group mt-2" id="te">
+					<label for="">Technical</label>
+					<textarea placeholder="Enter here" class="form-control teField" rows="1"></textarea>
+
+					<!-- new textarea -->
+
+					<div class="container text-center mt-2" id="teAddButton">
+						<button onclick="addNewTEField()" class="btn btn-primary btn-sm">Add</button>
+					</div>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Profile</label>
+					<textarea id="objectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Education</label>
+					<textarea id="eduField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+				</div>
+
+
+			</div>
+			<div class="col-md-6">
+				<!--                                                               second coloum                                                                       -->
+				<h2>Professional Information</h4>
+
+				<h3>Skills</h3>
+				
+				<div class="form-group mt-2">
+					<label for="">Skills 1</label>
+					<textarea id="skill1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Skills 2</label>
+					<textarea id="skill2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Skills 3</label>
+					<textarea id="skill3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Skills description 1</label>
+					<textarea id="skilld1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Skills description 2</label>
+					<textarea id="skilld2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Skills description 3</label>
+					<textarea id="skilld3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<h3>Experience</h3>
+
+				<div class="form-group mt-2">
+					<label for="">Company 1</label>
+					<textarea id="com1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Company 2</label>
+					<textarea id="com2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Company 3</label>
+					<textarea id="com3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job type 1</label>
+					<textarea id="comj1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job type 2</label>
+					<textarea id="comj2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job type 3</label>
+					<textarea id="comj3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job description 1</label>
+					<textarea id="comd1Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job description 2</label>
+					<textarea id="comd2Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="">Job description 3</label>
+					<textarea id="comd3Field" placeholder="Enter here" class="form-control" rows="1"></textarea>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="yearField">Year com 1</label>
+					<input type="text" id="year1Field" placeholder="Enter here" class="form-control">
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="yearField">Year com 2</label>
+					<input type="text" id="year2Field" placeholder="Enter here" class="form-control">
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="yearField">Year com 3</label>
+					<input type="text" id="year3Field" placeholder="Enter here" class="form-control">
+				</div>
+
+
+
+
+
+
+				<!-- <div class="form-group mt-2" id="we">
+					<label for="">Work Experience</label>
+					<textarea placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+
+					
+
+					<div class="container text-center mt-2" id="weAddButton">
+						<button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+					</div>
+				</div>
+
+				<div class="form-group mt-2" id="aq">
+					<label for="">Academic Qualification</label>
+					<textarea placeholder="Enter here" class="form-control aqField" rows="3"></textarea>
+
+					
+
+					<div class="container text-center mt-2" id="aqAddButton">
+						<button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+					</div>
+				</div> -->
+
+
+			</div>
+
+			<div class="container text-center mt-3">
+				<button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<div id="doc2" class="yui-t7">
+		<div id="inner">
+
+			<div id="hd">
+				<div class="yui-gc">
+					<div class="yui-u first">
+						<h1 id="nameT">Jonathan Doe</h1>
+						<h2 id="jobT">Web Designer, Director</h2>
+					</div>
+
+					<div class="yui-u">
+						<div class="contact-info">
+							<h3><div class="container mt-4 text-center">
+								<button onclick="printCV()" class="btn background">Print CV</button>
+							</div></h3>
+							<h3><a id="emailT" href="#1">name@yourdomain.com</a></h3>
+							<h3 id="contactT">(313) - 867-5309</h3>
+						</div>
+						<!--// .contact-info -->
+					</div>
+				</div>
+				<!--// .yui-gc -->
+			</div>
+			<!--// hd -->
+
+			<div id="bd">
+				<div id="yui-main">
+					<div class="yui-b">
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Profile</h2>
+							</div>
+							<div class="yui-u">
+								<p id="profilT" class="enlarge">
+									Progressively evolve cross-platform ideas before impactful infomediaries.
+									Energistically visualize tactical initiatives before cross-media catalysts for
+									change.
+								</p>
+							</div>
+						</div>
+						<!--// .yui-gf -->
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Skills</h2>
+							</div>
+							<div class="yui-u">
+
+								<div class="talent">
+									<h2 id="sk1">Web Design</h2>
+									<p id="skp1">Assertively exploit wireless initiatives rather than synergistic core
+										competencies. </p>
+								</div>
+
+								<div class="talent">
+									<h2 id="sk2">Interface Design</h2>
+									<p id="skp2">Credibly streamline mission-critical value with multifunctional
+										functionalities.
+									</p>
+								</div>
+
+								<div class="talent">
+									<h2 id="sk3">Project Direction</h2>
+									<p id="skp3">Proven ability to lead and manage a wide variety of design and
+										development
+										projects in team and independent situations.</p>
+								</div>
+							</div>
+						</div>
+						<!--// .yui-gf -->
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Technical</h2>
+							</div>
+							<div class="yui-u">
+								<ul id="techT" class="talent">
+									<li>XHTML</li>
+									<li>CSS</li>
+									<li class="last">Javascript</li>
+								</ul>
+							</div>
+						</div>
+						<!--// .yui-gf-->
+
+						<div class="yui-gf">
+
+							<div class="yui-u first">
+								<h2>Experience</h2>
+							</div>
+							<!--// .yui-u -->
+
+							<div class="yui-u">
+
+								<div class="job">
+									<h2 id="job1T">Facebook</h2>
+									<h3 id="job1T2">Senior Interface Designer</h3>
+									<h4 id="job1T3">2005-2007</h4>
+									<p id="job1T4">Intrinsicly enable optimal core competencies through corporate
+										relationships.
+										Phosfluorescently implement worldwide vortals and client-focused imperatives.
+										Conveniently initiate virtual paradigms and top-line convergence. </p>
+								</div>
+
+								<div class="job">
+									<h2 id="job2T">Apple Inc.</h2>
+									<h3 id="job2T2">Senior Interface Designer</h3>
+									<h4 id="job2T3">2005-2007</h4>
+									<p id="job2T4">Progressively reconceptualize multifunctional "outside the box"
+										thinking through
+										inexpensive methods of empowerment. Compellingly morph extensive niche markets
+										with mission-critical ideas. Phosfluorescently deliver bricks-and-clicks
+										strategic theme areas rather than scalable benefits. </p>
+								</div>
+
+								<div class="job">
+									<h2 id="job3T">Microsoft</h2>
+									<h3 id="job3T2">Principal and Creative Lead</h3>
+									<h4 id="job3T3">2004-2005</h4>
+									<p id="job3T4">Intrinsicly transform flexible manufactured products without
+										excellent
+										intellectual capital. Energistically evisculate orthogonal architectures through
+										covalent action items. Assertively incentivize sticky platforms without
+										synergistic materials. </p>
+								</div>
+
+							</div>
+							<!--// .yui-u -->
+						</div>
+						<!--// .yui-gf -->
+
+
+						<div class="yui-gf last">
+							<div class="yui-u first">
+								<h2>Education</h2>
+							</div>
+							<div class="yui-u">
+								<h3 id="eduT">Dual Major, Economics and Englishs </h3>
+							</div>
+						</div>
+						<!--// .yui-gf -->
+
+
+					</div>
+					<!--// .yui-b -->
+				</div>
+				<!--// yui-main -->
+			</div>
+			<!--// bd -->
+
+
+			<!--// footer -->
+
+		</div><!-- // inner -->
+
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
